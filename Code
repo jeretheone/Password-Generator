@@ -26,9 +26,10 @@ def passwordgen(length):
                 password += add
     return password
 def copy():
-    global enter
+    global enter, button
     length = enter.get()
     pyperclip.copy(passwordgen(length))
+    button.config(text = "Copied To Clipboard")
     return
 root = tk.Tk()
 text = tk.Label(root, text = "Input Password Length")
